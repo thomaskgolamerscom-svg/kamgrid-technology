@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 90" width="100%" height="100%">
+  <defs>
+    <linearGradient id="hGold1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#9A7B38"/>
+    </linearGradient>
+    <linearGradient id="hGold2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB"/>
+      <stop offset="100%" stop-color="#D4AF37"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Circular emblem badge -->
+  <g transform="translate(45, 45)">
+    <circle cx="0" cy="0" r="40" fill="#0B1E3D" />
+    <circle cx="0" cy="0" r="30" fill="#FFFFFF" />
+    <!-- Geometric KT -->
+    <g transform="translate(-16, -16) scale(0.38)">
+      <polygon points="0,0 20,0 20,90 0,90" fill="url(#hGold1)" />
+      <polygon points="20,45 60,0 80,0 35,50" fill="url(#hGold2)" />
+      <polygon points="30,40 80,90 60,90 15,45" fill="url(#hGold1)" />
+      <polygon points="35,0 90,0 90,20 35,20" fill="url(#hGold2)" />
+      <polygon points="52,20 72,20 72,90 52,90" fill="url(#hGold1)" />
+      <polygon points="35,20 52,20 52,40 35,35" fill="#4A1E40" />
+    </g>
+  </g>
+
+  <!-- Text -->
+  <text x="100" y="44" fill="#0B1E3D" font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif" font-weight="900" font-size="28" letter-spacing="1.5">
+    KAMGRID
+  </text>
+  <text x="100" y="66" fill="#0B1E3D" font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif" font-weight="700" font-size="14" letter-spacing="4.5">
+    TECHNOLOGY
+  </text>
+  <text x="100" y="78" fill="#64748B" font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif" font-weight="500" font-size="9" letter-spacing="0.5">
+    SMART ENGINEERING • RELIABLE RESULTS
+  </text>
+</svg>

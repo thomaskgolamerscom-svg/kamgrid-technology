@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Gold Gradients for KT Emblem -->
+    <linearGradient id="iconGold1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="50%" stop-color="#C5A059"/>
+      <stop offset="100%" stop-color="#9A7B38"/>
+    </linearGradient>
+    <linearGradient id="iconGold2" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F3E5AB"/>
+      <stop offset="50%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#A38035"/>
+    </linearGradient>
+    <linearGradient id="iconDarkNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1E3D"/>
+      <stop offset="100%" stop-color="#071328"/>
+    </linearGradient>
+
+    <!-- Curved Text Paths -->
+    <path id="iconTopArc" d="M 65, 250 A 185,185 0 1,1 435,250" fill="none" />
+    <path id="iconBottomArc" d="M 435, 250 A 185,185 0 0,1 65,250" fill="none" />
+  </defs>
+
+  <!-- Outer Dark Navy Ring -->
+  <circle cx="250" cy="250" r="240" fill="url(#iconDarkNavy)" stroke="#C5A059" stroke-width="4"/>
+
+  <!-- Inner White Circle -->
+  <circle cx="250" cy="250" r="180" fill="#FFFFFF" stroke="#0B1E3D" stroke-width="3"/>
+
+  <!-- Curved Text in Navy Ring -->
+  <text fill="#FFFFFF" font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif" font-weight="800" font-size="21" letter-spacing="3.5">
+    <textPath href="#iconTopArc" startOffset="50%" text-anchor="middle">
+      KAMGRID TECHNOLOGY
+    </textPath>
+  </text>
+
+  <text fill="#FFFFFF" font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif" font-weight="500" font-size="14" letter-spacing="1.5">
+    <textPath href="#iconBottomArc" startOffset="50%" text-anchor="middle">
+      a subsidiary of Chowa Aku Global Ventures
+    </textPath>
+  </text>
+
+  <!-- Center Geometric KT Mark -->
+  <g transform="translate(250, 205) scale(0.95)">
+    <g transform="translate(-45, -45)">
+      <!-- Left pillar of K -->
+      <polygon points="0,0 20,0 20,90 0,90" fill="url(#iconGold1)" />
+      <!-- Upper diagonal arm of K -->
+      <polygon points="20,45 60,0 80,0 35,50" fill="url(#iconGold2)" />
+      <!-- Lower diagonal arm of K -->
+      <polygon points="30,40 80,90 60,90 15,45" fill="url(#iconGold1)" />
+      <!-- Top bar of T overlapping -->
+      <polygon points="35,0 90,0 90,20 35,20" fill="url(#iconGold2)" opacity="0.9" />
+      <!-- Stem of T -->
+      <polygon points="52,20 72,20 72,90 52,90" fill="url(#iconGold1)" opacity="0.95" />
+      <!-- Accent facet overlay -->
+      <polygon points="35,20 52,20 52,40 35,35" fill="#4A1E40" opacity="0.85" />
+      <polygon points="52,40 72,40 62,60 52,50" fill="#2E1029" opacity="0.9" />
+    </g>
+  </g>
+
+  <!-- Center Text KAMGRID TECHNOLOGY -->
+  <text x="250" y="300" text-anchor="middle" fill="#0B1E3D" font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif" font-weight="900" font-size="28" letter-spacing="2">
+    KAMGRID
+  </text>
+  <text x="250" y="325" text-anchor="middle" fill="#0B1E3D" font-family="'Plus Jakarta Sans', 'Inter', system-ui, sans-serif" font-weight="700" font-size="16" letter-spacing="5">
+    TECHNOLOGY
+  </text>
+</svg>

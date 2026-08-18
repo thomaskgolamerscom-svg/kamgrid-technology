@@ -1,0 +1,6 @@
+{
+  "name": "KAMGRID TECHNOLOGY",
+  "description": "Professional engineering company providing solar installation, electrical services, CCTV, lightning protection and networking solutions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
