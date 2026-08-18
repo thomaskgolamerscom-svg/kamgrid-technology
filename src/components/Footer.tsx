@@ -3,7 +3,7 @@ import { useCMS } from '../context/CMSContext';
 import { Phone, Mail, MapPin, ArrowRight, ShieldCheck, MessageSquare } from 'lucide-react';
 
 export const Footer: React.FC = () => {
-  const { data, navigate, setIsQuoteModalOpen, setIsAdmin, isAdmin } = useCMS();
+  const { data, navigate, setIsQuoteModalOpen } = useCMS();
 
   return (
     <footer className="bg-[#071328] text-slate-300 pt-16 pb-8 border-t-2 border-amber-500 relative overflow-hidden">
@@ -127,14 +127,7 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          <div className="flex items-center gap-4">
-            <button
-              onClick={() => setIsAdmin(!isAdmin)}
-              className="text-slate-400 hover:text-amber-400 text-[10px] underline uppercase tracking-wider cursor-pointer"
-            >
-              {isAdmin ? 'Exit CMS Admin' : 'Admin Portal'}
-            </button>
-            <span className="text-slate-700">|</span>
+          <div className="flex items-center gap-3">
             <span className="text-slate-400 font-mono">CAC REG: VERIFIED</span>
           </div>
 

@@ -5,7 +5,6 @@ import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
 import { ServiceModal } from './components/ServiceModal';
 import { ProjectModal } from './components/ProjectModal';
-import { AdminPanel } from './components/AdminPanel';
 import { QuoteSection } from './components/QuoteSection';
 import { ErrorFallback } from './components/ErrorFallback';
 import { KamgridBrandTransition } from './components/BrandLoader';
@@ -19,6 +18,7 @@ import { ProjectsPage } from './pages/ProjectsPage';
 import { ProjectDetailPage } from './pages/ProjectDetailPage';
 import { CapabilityPage } from './pages/CapabilityPage';
 import { ContactPage } from './pages/ContactPage';
+import { AdminPage } from './pages/AdminPage';
 
 const AppContent: React.FC = () => {
   const {
@@ -29,10 +29,14 @@ const AppContent: React.FC = () => {
     setSelectedProjectModal,
     isQuoteModalOpen,
     setIsQuoteModalOpen,
-    isAdmin,
   } = useCMS();
 
-  // Route Resolver
+  // Route: Dedicated Admin Portal Isolation
+  if (currentPath === '/admin') {
+    return <AdminPage />;
+  }
+
+  // Public Route Resolver
   const renderCurrentPage = () => {
     // Exact match: Home
     if (currentPath === '/' || currentPath === '') {
@@ -130,9 +134,6 @@ const AppContent: React.FC = () => {
           </div>
         </div>
       )}
-
-      {/* Live CMS Admin Panel */}
-      {isAdmin && <AdminPanel />}
     </div>
   );
 };

@@ -162,8 +162,8 @@ export const ProjectsSection: React.FC = () => {
         {filteredProjects.length === 0 && (
           <div className="text-center py-12 bg-slate-50 rounded-lg border border-dashed border-slate-300 text-slate-500">
             <Layers className="w-10 h-10 mx-auto text-slate-400 mb-2" />
-            <p className="text-sm font-medium">No projects listed under this category yet.</p>
-            <p className="text-xs text-slate-400 mt-1">Use the CMS Admin Portal to add project records.</p>
+            <p className="text-sm font-medium">No projects listed under this category currently.</p>
+            <p className="text-xs text-slate-400 mt-1">Contact our engineering team for customized deployment specs.</p>
           </div>
         )}
 

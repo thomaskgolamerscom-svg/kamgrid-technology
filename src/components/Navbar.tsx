@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Phone, Mail, MapPin, Menu, X, ArrowRight, Settings, ShieldCheck, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, Menu, X, ArrowRight, ShieldCheck, MessageSquare } from 'lucide-react';
 import { useCMS } from '../context/CMSContext';
 
 export const Navbar: React.FC = () => {
-  const { data, currentPath, navigate, setIsQuoteModalOpen, isAdmin, setIsAdmin } = useCMS();
+  const { data, currentPath, navigate, setIsQuoteModalOpen } = useCMS();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -64,24 +64,10 @@ export const Navbar: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            <span className="hidden lg:flex items-center gap-1 text-slate-400 text-[11px]">
+            <span className="flex items-center gap-1 text-slate-400 text-[11px]">
               <MapPin className="w-3 h-3 text-amber-500" />
               <span>Aba, Abia State • Enugu • Nationwide Mobilization</span>
             </span>
-
-            {/* Admin Toggle button */}
-            <button
-              onClick={() => setIsAdmin(!isAdmin)}
-              className={`flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-semibold transition-colors cursor-pointer ${
-                isAdmin
-                  ? 'bg-amber-500 text-slate-950 hover:bg-amber-400'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
-              }`}
-              title="Toggle CMS Admin Panel"
-            >
-              <Settings className="w-3 h-3" />
-              <span>{isAdmin ? 'Admin Mode (Active)' : 'CMS Portal'}</span>
-            </button>
           </div>
         </div>
       </div>

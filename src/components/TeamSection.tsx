@@ -83,7 +83,7 @@ export const TeamSection: React.FC = () => {
         ) : (
           <div className="p-6 bg-white rounded-lg border border-slate-200 text-center max-w-xl mx-auto shadow-2xs">
             <p className="text-xs text-slate-600 font-medium">
-              Specific engineering personnel profiles can be added through the CMS Admin Portal as verified credentials are updated.
+              Engineering team certifications and project assignments are verified under corporate quality and COREN standards.
             </p>
           </div>
         )}
