@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { ProjectItem } from '../types';
 import { useCMS } from '../context/CMSContext';
 import { X, MapPin, CheckCircle2, ChevronLeft, ChevronRight, Layers, ArrowRight } from 'lucide-react';
+import { KAMGRID_IMAGES } from '../assets/images';
 
 interface ProjectModalProps {
   project: ProjectItem;
@@ -14,7 +15,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
   const images = project.images.length > 0
     ? project.images
-    : ['https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80'];
+    : KAMGRID_IMAGES.projects.enugu33Kva;
 
   const handleNextImage = () => {
     setActiveImageIndex((prev) => (prev + 1) % images.length);

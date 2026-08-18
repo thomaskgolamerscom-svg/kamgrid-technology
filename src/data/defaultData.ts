@@ -1,5 +1,5 @@
 import { CMSData } from '../types';
-import solarEngineerImg from '../assets/images/solar_engineer_duty_1787022968614.jpg';
+import { KAMGRID_IMAGES } from '../assets/images';
 
 export const initialCMSData: CMSData = {
   company: {
@@ -22,7 +22,7 @@ export const initialCMSData: CMSData = {
     supportingText: "KAMGRID TECHNOLOGY delivers professional solar, electrical, security, lightning protection and structured cabling solutions for residential, commercial and industrial environments.",
     primaryCtaText: "REQUEST A QUOTE",
     secondaryCtaText: "EXPLORE OUR SERVICES",
-    heroImage: solarEngineerImg,
+    heroImage: KAMGRID_IMAGES.hero,
   },
   stats: [
     {
@@ -103,7 +103,7 @@ export const initialCMSData: CMSData = {
       shortDescription: "Reliable solar energy solutions designed to provide dependable power for homes, businesses and industrial facilities.",
       fullDescription: "At KAMGRID TECHNOLOGY, we design, deploy and maintain robust photovoltaic solar energy systems tailored to Nigeria's demanding power environment. Whether eliminating power outages for residential homes or reducing operational energy expenditure for commercial complexes, our systems deliver continuous, clean electricity.",
       iconName: "Sun",
-      image: "https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80",
+      image: KAMGRID_IMAGES.services.solar,
       isCore: true,
       capabilities: [
         "Solar consultation",
@@ -128,7 +128,7 @@ export const initialCMSData: CMSData = {
       shortDescription: "Professional surveillance solutions designed to improve visibility, security and control across residential, commercial and industrial environments.",
       fullDescription: "Secure your facilities with engineered visual security networks. KAMGRID TECHNOLOGY installs high-definition surveillance infrastructure, combining night vision optics, motion alerts, remote smartphone monitoring and structured NVR/DVR recording platforms.",
       iconName: "ShieldCheck",
-      image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=1200&q=80",
+      image: KAMGRID_IMAGES.services.cctv,
       isCore: true,
       capabilities: [
         "CCTV consultation",
@@ -153,7 +153,7 @@ export const initialCMSData: CMSData = {
       shortDescription: "Professional electrical engineering and installation services supporting residential, commercial and industrial infrastructure.",
       fullDescription: "From main distribution panels and transformer connections to complete building conduit wiring and industrial motor controls, KAMGRID provides heavy-duty, compliant electrical engineering executed with absolute precision and safety.",
       iconName: "Zap",
-      image: "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?auto=format&fit=crop&w=1200&q=80",
+      image: KAMGRID_IMAGES.services.electrical,
       isCore: true,
       capabilities: [
         "Electrical installation",
@@ -184,7 +184,7 @@ export const initialCMSData: CMSData = {
       shortDescription: "Professional lightning protection solutions designed to help protect buildings, electrical infrastructure and critical systems from lightning-related risks.",
       fullDescription: "Safeguard high-value assets and delicate electronic equipment against atmospheric lightning strikes and high-voltage power surges. KAMGRID engineers engineered air terminals, low-impedance copper earthing arrays, and surge protection devices.",
       iconName: "ShieldAlert",
-      image: "https://images.unsplash.com/photo-1605721911519-3dfeb3be25e7?auto=format&fit=crop&w=1200&q=80",
+      image: KAMGRID_IMAGES.services.lightning,
       isCore: true,
       capabilities: [
         "Lightning protection consultation",
@@ -203,7 +203,7 @@ export const initialCMSData: CMSData = {
       shortDescription: "Professional structured cabling and connectivity solutions designed to provide organized, reliable infrastructure for modern buildings, offices and facilities.",
       fullDescription: "Reliable communication networks require meticulous physical cabling layout. KAMGRID plans and installs structured Cat6/Cat6A data cables, fiber optic backbones, server rack management, patch panels, and high-speed Wi-Fi access points.",
       iconName: "Network",
-      image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=1200&q=80",
+      image: KAMGRID_IMAGES.services.structuredCabling,
       isCore: true,
       capabilities: [
         "Data cabling",
@@ -231,9 +231,9 @@ export const initialCMSData: CMSData = {
       featured: true,
       description: "Engineered and executed a high-capacity 33KVA hybrid inverter installation coupled with a 60KWH lithium solar energy storage system in Enugu. Designed to seamlessly handle whole-house heavy electrical loads including air conditioners, pumps, and kitchen appliances continuously without grid reliance.",
       images: [
-        "https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=1200&q=80",
-        "https://images.unsplash.com/photo-1613665813446-82a78c468a1d?auto=format&fit=crop&w=1200&q=80",
+        KAMGRID_IMAGES.projects.enugu33Kva[0],
+        KAMGRID_IMAGES.projects.enugu33Kva[1],
+        KAMGRID_IMAGES.projects.enugu33Kva[2],
       ],
     },
   ],

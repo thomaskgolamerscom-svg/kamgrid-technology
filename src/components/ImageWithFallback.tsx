@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { KamgridLoader } from './BrandLoader';
+import { KAMGRID_IMAGES } from '../assets/images';
 
 interface ImageWithFallbackProps extends React.ImgHTMLAttributes<HTMLImageElement> {
   src: string;
@@ -19,7 +20,7 @@ export const ImageWithFallback: React.FC<ImageWithFallbackProps> = ({
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
 
-  const fallbackSrc = 'https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=1200&q=80';
+  const fallbackSrc = KAMGRID_IMAGES.fallback;
 
   return (
     <div className={`relative overflow-hidden bg-slate-900 ${aspectRatio} ${containerClassName}`}>

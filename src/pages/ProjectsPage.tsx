@@ -81,10 +81,10 @@ export const ProjectsPage: React.FC = () => {
                   {/* Project Image */}
                   <div className="relative h-56 bg-slate-950 overflow-hidden">
                     <ImageWithFallback
-                      src={project.images[0] || 'https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80'}
+                      src={project.images[0]}
                       alt={project.title}
                       aspectRatio="h-56 w-full"
-                      className="group-hover:scale-105 transition-transform duration-500 opacity-90"
+                      className="group-hover:scale-105 transition-transform duration-500 opacity-95"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3D]/90 via-transparent to-transparent pointer-events-none" />
 

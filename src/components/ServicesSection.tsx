@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCMS } from '../context/CMSContext';
 import { Sun, ShieldCheck, Zap, ShieldAlert, Network, ArrowRight, Check } from 'lucide-react';
+import { ImageWithFallback } from './ImageWithFallback';
 import { ServiceItem } from '../types';
 
 export const ServicesSection: React.FC = () => {
@@ -55,12 +56,13 @@ export const ServicesSection: React.FC = () => {
             >
               {/* Card Image Banner */}
               <div className="relative h-48 overflow-hidden bg-slate-900">
-                <img
+                <ImageWithFallback
                   src={service.image}
                   alt={service.title}
+                  aspectRatio="h-48 w-full"
                   className="w-full h-full object-cover object-center opacity-90 group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3D] via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3D] via-transparent to-transparent opacity-80 pointer-events-none" />
                 
                 {/* Category Icon Badge */}
                 <div className="absolute top-4 left-4 p-2.5 bg-[#0B1E3D]/90 backdrop-blur-xs rounded-md border border-amber-500/40">

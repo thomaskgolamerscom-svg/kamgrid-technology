@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useCMS } from '../context/CMSContext';
 import { ErrorFallback } from '../components/ErrorFallback';
 import { ArrowLeft, MapPin, CheckCircle2, ChevronLeft, ChevronRight, ArrowRight, ShieldCheck, Zap, Layers } from 'lucide-react';
+import { KAMGRID_IMAGES } from '../assets/images';
 
 interface ProjectDetailPageProps {
   projectId?: string;
@@ -29,7 +30,7 @@ export const ProjectDetailPage: React.FC<ProjectDetailPageProps> = ({ projectId 
 
   const images = project.images.length > 0
     ? project.images
-    : ['https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80'];
+    : KAMGRID_IMAGES.projects.enugu33Kva;
 
   const handleNextImage = () => {
     setActiveImageIndex((prev) => (prev + 1) % images.length);

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useCMS } from '../context/CMSContext';
 import { ShieldCheck, Target, Award, CheckCircle2, Building, Wrench, HardHat, Compass, FileCheck } from 'lucide-react';
+import { ImageWithFallback } from '../components/ImageWithFallback';
+import { KAMGRID_IMAGES } from '../assets/images';
 
 export const AboutPage: React.FC = () => {
   const { data, setIsQuoteModalOpen } = useCMS();
@@ -79,6 +81,20 @@ export const AboutPage: React.FC = () => {
 
             {/* Mission & Vision Pillars Right */}
             <div className="lg:col-span-5 space-y-6">
+              {/* Engineering Team Site Inspection Visual */}
+              <div className="rounded-xl overflow-hidden border border-slate-300 shadow-md">
+                <ImageWithFallback
+                  src={KAMGRID_IMAGES.about.teamInspection}
+                  alt="KAMGRID Engineering personnel reviewing project schematics on site"
+                  aspectRatio="aspect-16/10"
+                  className="w-full h-full object-cover"
+                />
+                <div className="bg-slate-900 px-3.5 py-2 text-[11px] font-mono text-slate-300 flex items-center justify-between border-t border-slate-800">
+                  <span>SITE REVIEW & QUALITY ASSURANCE</span>
+                  <span className="text-amber-400">ABIA • ENUGU • NATIONWIDE</span>
+                </div>
+              </div>
+
               <div className="bg-[#0B1E3D] text-white p-6 sm:p-8 rounded-xl shadow-lg border border-slate-800 space-y-6">
                 <div>
                   <span className="text-amber-400 font-mono text-xs font-bold uppercase tracking-widest block mb-1">

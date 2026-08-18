@@ -1,6 +1,7 @@
 import React from 'react';
 import { useCMS } from '../context/CMSContext';
 import { ServiceItem } from '../types';
+import { ImageWithFallback } from './ImageWithFallback';
 import { X, Check, ArrowRight } from 'lucide-react';
 
 interface ServiceModalProps {
@@ -23,12 +24,13 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ service, onClose }) 
         
         {/* Header */}
         <div className="relative h-48 bg-slate-900 overflow-hidden flex-shrink-0">
-          <img
+          <ImageWithFallback
             src={service.image}
             alt={service.title}
-            className="w-full h-full object-cover opacity-80"
+            aspectRatio="h-48 w-full"
+            className="w-full h-full object-cover opacity-90"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3D] via-[#0B1E3D]/50 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3D] via-[#0B1E3D]/50 to-transparent pointer-events-none" />
           
           <button
             onClick={onClose}

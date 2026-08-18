@@ -66,12 +66,38 @@ export const CMSProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
           (s: { id?: string; label?: string }) =>
             s.id !== 'stat-4' && !s.label?.includes('SIMULTANEOUSLY')
         );
+
+        // Map fresh local assets if cached services/projects contain old unsplash URLs
+        const sanitizedServices = (parsed.services || initialCMSData.services).map((srv: any) => {
+          const defaultMatch = initialCMSData.services.find(s => s.id === srv.id);
+          if (defaultMatch && (typeof srv.image === 'string' && srv.image.includes('unsplash.com'))) {
+            return { ...srv, image: defaultMatch.image };
+          }
+          return srv;
+        });
+
+        const sanitizedProjects = (parsed.projects || initialCMSData.projects).map((prj: any) => {
+          const defaultMatch = initialCMSData.projects.find(p => p.id === prj.id);
+          if (defaultMatch && Array.isArray(prj.images) && prj.images.some((img: string) => typeof img === 'string' && img.includes('unsplash.com'))) {
+            return { ...prj, images: defaultMatch.images };
+          }
+          return prj;
+        });
+
         return {
           ...initialCMSData,
           ...parsed,
+          services: sanitizedServices,
+          projects: sanitizedProjects,
+          hero: {
+            ...initialCMSData.hero,
+            ...(parsed.hero || {}),
+            heroImage: (parsed.hero?.heroImage && !parsed.hero.heroImage.includes('unsplash.com'))
+              ? parsed.hero.heroImage
+              : initialCMSData.hero.heroImage,
+          },
           stats: filteredStats.length === 3 ? filteredStats : initialCMSData.stats,
           company: { ...initialCMSData.company, ...(parsed.company || {}) },
-          hero: { ...initialCMSData.hero, ...(parsed.hero || {}) },
         };
       }
     } catch (e) {

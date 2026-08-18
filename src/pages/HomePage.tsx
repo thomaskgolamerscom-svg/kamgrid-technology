@@ -203,13 +203,13 @@ export const HomePage: React.FC = () => {
             <div className="rounded-xl bg-[#0B1E3D] text-white overflow-hidden border-2 border-amber-500/80 shadow-xl grid grid-cols-1 lg:grid-cols-12 gap-0">
               <div className="lg:col-span-7 relative h-64 sm:h-80 lg:h-auto bg-slate-950 overflow-hidden group">
                 <ImageWithFallback
-                  src={featuredProject.images[0] || 'https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80'}
+                  src={featuredProject.images[0]}
                   alt={featuredProject.title}
                   aspectRatio="h-full w-full"
-                  className="group-hover:scale-105 transition-transform duration-500 opacity-90"
+                  className="group-hover:scale-105 transition-transform duration-500 opacity-95"
                 />
                 <div className="absolute top-4 left-4 bg-amber-500 text-slate-950 font-bold text-[10px] tracking-widest px-3 py-1 rounded uppercase">
-                  VERIFIED INSTALLATION
+                  PROJECT SPECIFICATION
                 </div>
               </div>
 

@@ -175,7 +175,12 @@ export const ServiceDetailPage: React.FC<ServiceDetailPageProps> = ({ serviceId,
                       className="p-4 rounded-lg bg-slate-50 border border-slate-200 hover:border-amber-500 transition-colors cursor-pointer group space-y-2"
                     >
                       <div className="h-32 bg-slate-900 rounded overflow-hidden">
-                        <img src={p.images[0]} alt={p.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                        <ImageWithFallback
+                          src={p.images[0]}
+                          alt={p.title}
+                          aspectRatio="h-32 w-full"
+                          className="group-hover:scale-105 transition-transform"
+                        />
                       </div>
                       <h4 className="font-bold text-xs sm:text-sm text-[#0B1E3D] group-hover:text-amber-600 transition-colors">
                         {p.title}

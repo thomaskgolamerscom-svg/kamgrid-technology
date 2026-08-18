@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useCMS } from '../context/CMSContext';
 import { MapPin, ArrowRight, Eye, CheckCircle2, Layers } from 'lucide-react';
+import { ImageWithFallback } from './ImageWithFallback';
 
 export const ProjectsSection: React.FC = () => {
   const { data, setSelectedProjectModal } = useCMS();
@@ -54,10 +55,11 @@ export const ProjectsSection: React.FC = () => {
           >
             {/* Image gallery preview */}
             <div className="lg:col-span-7 relative h-72 sm:h-96 lg:h-auto bg-slate-950 overflow-hidden group">
-              <img
-                src={featProj.images[0] || 'https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=1200&q=80'}
+              <ImageWithFallback
+                src={featProj.images[0]}
                 alt={featProj.title}
-                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 opacity-90"
+                aspectRatio="h-full w-full"
+                className="group-hover:scale-105 transition-transform duration-500 opacity-95"
               />
               <div className="absolute top-4 left-4 bg-amber-500 text-slate-950 font-bold text-[10px] tracking-widest px-3 py-1 rounded uppercase">
                 FEATURED ENGINEERING PROJECT
@@ -116,10 +118,11 @@ export const ProjectsSection: React.FC = () => {
               className="bg-slate-50 rounded-lg border border-slate-200 overflow-hidden shadow-xs hover:shadow-lg hover:border-amber-500 transition-all duration-300 flex flex-col cursor-pointer group"
             >
               <div className="relative h-52 bg-slate-900 overflow-hidden">
-                <img
-                  src={project.images[0] || 'https://images.unsplash.com/photo-1508873696983-2df515122519?auto=format&fit=crop&w=800&q=80'}
+                <ImageWithFallback
+                  src={project.images[0]}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-90"
+                  aspectRatio="h-52 w-full"
+                  className="group-hover:scale-105 transition-transform duration-500 opacity-95"
                 />
                 <div className="absolute top-3 right-3 bg-slate-900/80 text-amber-400 font-mono text-[10px] px-2.5 py-1 rounded border border-slate-700">
                   {project.clientType}
